@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8A3AEA431B59AFE700B75949 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA421B59AFE700B75949 /* main.cpp */; };
+		8A3AEA4C1B5D2B4B00B75949 /* input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA491B5D2B4B00B75949 /* input.cpp */; };
+		8A3AEA4D1B5D2B4B00B75949 /* kernel_float.cl in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA4B1B5D2B4B00B75949 /* kernel_float.cl */; };
+		8A3AEA511B5D2BC200B75949 /* simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA4F1B5D2BC200B75949 /* simulator.cpp */; };
+		8A3AEA561B5DA7E200B75949 /* simulator_2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA541B5DA7E200B75949 /* simulator_2d.cpp */; };
+		8A3AEA591B5DB18900B75949 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA571B5DB18900B75949 /* util.cpp */; };
+		8A3AEA5C1B5EF1D400B75949 /* randn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA5A1B5EF1D400B75949 /* randn.cpp */; };
+		8A3AEA771B602DD900B75949 /* cl_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA721B602DD900B75949 /* cl_common.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,19 @@
 /* Begin PBXFileReference section */
 		8A3AEA3F1B59AFE700B75949 /* AllenCahnFD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AllenCahnFD; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3AEA421B59AFE700B75949 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8A3AEA491B5D2B4B00B75949 /* input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input.cpp; sourceTree = "<group>"; };
+		8A3AEA4A1B5D2B4B00B75949 /* input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = input.hpp; sourceTree = "<group>"; };
+		8A3AEA4B1B5D2B4B00B75949 /* kernel_float.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = kernel_float.cl; sourceTree = "<group>"; };
+		8A3AEA4F1B5D2BC200B75949 /* simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulator.cpp; sourceTree = "<group>"; };
+		8A3AEA501B5D2BC200B75949 /* simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simulator.hpp; sourceTree = "<group>"; };
+		8A3AEA541B5DA7E200B75949 /* simulator_2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulator_2d.cpp; sourceTree = "<group>"; };
+		8A3AEA551B5DA7E200B75949 /* simulator_2d.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simulator_2d.hpp; sourceTree = "<group>"; };
+		8A3AEA571B5DB18900B75949 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		8A3AEA581B5DB18900B75949 /* util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = util.hpp; sourceTree = "<group>"; };
+		8A3AEA5A1B5EF1D400B75949 /* randn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = randn.cpp; sourceTree = "<group>"; };
+		8A3AEA5B1B5EF1D400B75949 /* randn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = randn.hpp; sourceTree = "<group>"; };
+		8A3AEA721B602DD900B75949 /* cl_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cl_common.cpp; sourceTree = "<group>"; };
+		8A3AEA731B602DD900B75949 /* cl_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cl_common.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3AEA411B59AFE700B75949 /* AllenCahnFD */,
+				8A3AEA711B602DD900B75949 /* cl_common */,
 				8A3AEA401B59AFE700B75949 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,8 +79,28 @@
 			isa = PBXGroup;
 			children = (
 				8A3AEA421B59AFE700B75949 /* main.cpp */,
+				8A3AEA491B5D2B4B00B75949 /* input.cpp */,
+				8A3AEA4A1B5D2B4B00B75949 /* input.hpp */,
+				8A3AEA4F1B5D2BC200B75949 /* simulator.cpp */,
+				8A3AEA501B5D2BC200B75949 /* simulator.hpp */,
+				8A3AEA5A1B5EF1D400B75949 /* randn.cpp */,
+				8A3AEA5B1B5EF1D400B75949 /* randn.hpp */,
+				8A3AEA571B5DB18900B75949 /* util.cpp */,
+				8A3AEA581B5DB18900B75949 /* util.hpp */,
+				8A3AEA4B1B5D2B4B00B75949 /* kernel_float.cl */,
+				8A3AEA541B5DA7E200B75949 /* simulator_2d.cpp */,
+				8A3AEA551B5DA7E200B75949 /* simulator_2d.hpp */,
 			);
 			path = AllenCahnFD;
+			sourceTree = "<group>";
+		};
+		8A3AEA711B602DD900B75949 /* cl_common */ = {
+			isa = PBXGroup;
+			children = (
+				8A3AEA721B602DD900B75949 /* cl_common.cpp */,
+				8A3AEA731B602DD900B75949 /* cl_common.hpp */,
+			);
+			path = cl_common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3AEA4C1B5D2B4B00B75949 /* input.cpp in Sources */,
+				8A3AEA5C1B5EF1D400B75949 /* randn.cpp in Sources */,
+				8A3AEA4D1B5D2B4B00B75949 /* kernel_float.cl in Sources */,
+				8A3AEA511B5D2BC200B75949 /* simulator.cpp in Sources */,
 				8A3AEA431B59AFE700B75949 /* main.cpp in Sources */,
+				8A3AEA771B602DD900B75949 /* cl_common.cpp in Sources */,
+				8A3AEA561B5DA7E200B75949 /* simulator_2d.cpp in Sources */,
+				8A3AEA591B5DB18900B75949 /* util.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,14 +253,22 @@
 		8A3AEA471B59AFE700B75949 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cl_common",
+				);
+				PRODUCT_NAME = AllenCahnFD;
 			};
 			name = Debug;
 		};
 		8A3AEA481B59AFE700B75949 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cl_common",
+				);
+				PRODUCT_NAME = AllenCahnFD;
 			};
 			name = Release;
 		};
@@ -235,6 +291,7 @@
 				8A3AEA481B59AFE700B75949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
