@@ -16,6 +16,9 @@
 		8A3AEA5C1B5EF1D400B75949 /* randn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA5A1B5EF1D400B75949 /* randn.cpp */; };
 		8A3AEA771B602DD900B75949 /* cl_common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEA721B602DD900B75949 /* cl_common.cpp */; };
 		8A3AEBA31B61874100B75949 /* kernel_float_2d.cl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A3AEA4B1B5D2B4B00B75949 /* kernel_float_2d.cl */; };
+		8A3AEBA51B61887200B75949 /* kernel_float_3d.cl in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEBA41B61887200B75949 /* kernel_float_3d.cl */; };
+		8A3AEBA71B618D8D00B75949 /* simulator_3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A3AEBA61B618D8D00B75949 /* simulator_3d.cpp */; };
+		8A3AEBA91B61978900B75949 /* kernel_float_3d.cl in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A3AEBA41B61887200B75949 /* kernel_float_3d.cl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				8A3AEBA91B61978900B75949 /* kernel_float_3d.cl in CopyFiles */,
 				8A3AEBA31B61874100B75949 /* kernel_float_2d.cl in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +51,9 @@
 		8A3AEA5B1B5EF1D400B75949 /* randn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = randn.hpp; sourceTree = "<group>"; };
 		8A3AEA721B602DD900B75949 /* cl_common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cl_common.cpp; sourceTree = "<group>"; };
 		8A3AEA731B602DD900B75949 /* cl_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cl_common.hpp; sourceTree = "<group>"; };
+		8A3AEBA41B61887200B75949 /* kernel_float_3d.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = kernel_float_3d.cl; path = kernels/kernel_float_3d.cl; sourceTree = "<group>"; };
+		8A3AEBA61B618D8D00B75949 /* simulator_3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simulator_3d.cpp; sourceTree = "<group>"; };
+		8A3AEBA81B618DA300B75949 /* simulator_3d.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simulator_3d.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +93,9 @@
 				8A3AEA4A1B5D2B4B00B75949 /* input.hpp */,
 				8A3AEBA21B6186B700B75949 /* kernels */,
 				8A3AEA541B5DA7E200B75949 /* simulator_2d.cpp */,
+				8A3AEBA61B618D8D00B75949 /* simulator_3d.cpp */,
 				8A3AEA551B5DA7E200B75949 /* simulator_2d.hpp */,
+				8A3AEBA81B618DA300B75949 /* simulator_3d.hpp */,
 			);
 			path = AllenCahnFD;
 			sourceTree = "<group>";
@@ -118,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3AEA4B1B5D2B4B00B75949 /* kernel_float_2d.cl */,
+				8A3AEBA41B61887200B75949 /* kernel_float_3d.cl */,
 			);
 			name = kernels;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3AEBA51B61887200B75949 /* kernel_float_3d.cl in Sources */,
 				8A3AEA4C1B5D2B4B00B75949 /* input.cpp in Sources */,
 				8A3AEA5C1B5EF1D400B75949 /* randn.cpp in Sources */,
 				8A3AEA4D1B5D2B4B00B75949 /* kernel_float_2d.cl in Sources */,
@@ -186,6 +197,7 @@
 				8A3AEA771B602DD900B75949 /* cl_common.cpp in Sources */,
 				8A3AEA561B5DA7E200B75949 /* simulator_2d.cpp in Sources */,
 				8A3AEA591B5DB18900B75949 /* util.cpp in Sources */,
+				8A3AEBA71B618D8D00B75949 /* simulator_3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
