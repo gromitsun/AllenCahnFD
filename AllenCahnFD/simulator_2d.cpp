@@ -12,7 +12,7 @@
 #include "simulator_2d.hpp"
 #include "cl_common.hpp"
 #include "input.hpp"
-#include "randn.cpp"
+#include "randn.hpp"
 
 
 
