@@ -33,7 +33,7 @@ int main(int argc, const char * argv[])
     
     sim.init_cl(CL_DEVICE_TYPE_GPU, 1);
     
-    sim.build_kernel("/Users/yue/Dropbox/Documents/Work/OpenCL/AllenCahnFD/AllenCahnFD/kernel_float.cl");
+    sim.build_kernel("kernel_float_2d.cl");
     
     sim.init_sim(0, 0.001);
     
