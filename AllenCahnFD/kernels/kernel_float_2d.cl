@@ -26,8 +26,8 @@ __kernel void calc_2d(__read_only image2d_t Phi,
 #ifndef __NINE_STENCIL__
     float4 laplacian =(xm+xp+ym+yp-4.0f*phi)/(dx*dx);  // 5-point stencil
 #else
-    float4 xym= (read_imagef(Phi,sampler,(normalizedCoord+(float2){-incrementx,-incrementx})));
-    float4 xyp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){incrementx,incrementx})));
+    float4 xym= (read_imagef(Phi,sampler,(normalizedCoord+(float2){-incrementx,-incrementy})));
+    float4 xyp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){incrementx,incrementy})));
     float4 xpym= (read_imagef(Phi,sampler,(normalizedCoord+(float2){incrementx,-incrementy})));
     float4 xmyp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){-incrementx,incrementy})));
     
