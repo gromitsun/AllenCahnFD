@@ -1,3 +1,5 @@
+#define __NINE_STENCIL__
+
 __constant sampler_t sampler = CLK_NORMALIZED_COORDS_TRUE | CLK_ADDRESS_REPEAT | CLK_FILTER_NEAREST;
 
 
@@ -21,13 +23,18 @@ __kernel void calc_2d(__read_only image2d_t Phi,
     float4 xp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){incrementx,0})));
     float4 ym= (read_imagef(Phi,sampler,(normalizedCoord+(float2){0,-incrementy})));
     float4 yp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){0,incrementy})));
-//    float4 laplacian =(xm+xp+ym+yp-4.0f*phi)/(dx*dx);  // 5-point stencil
+#ifndef __NINE_STENCIL__
+    float4 laplacian =(xm+xp+ym+yp-4.0f*phi)/(dx*dx);  // 5-point stencil
+#else
     float4 xym= (read_imagef(Phi,sampler,(normalizedCoord+(float2){-incrementx,-incrementx})));
     float4 xyp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){incrementx,incrementx})));
     float4 xpym= (read_imagef(Phi,sampler,(normalizedCoord+(float2){incrementx,-incrementy})));
     float4 xmyp= (read_imagef(Phi,sampler,(normalizedCoord+(float2){-incrementx,incrementy})));
     
     float4 laplacian =((xm+xp+ym+yp)/2.0f + (xyp+xym+xmyp+xpym)/4.0f - 3.0f*phi)/(dx*dx); // 9-point stencil
+#undef __NINE_STENCIL__
+#endif
     float4 phi_next = phi + dt * M * ( 2.0f * K * laplacian - a_2 * phi - a_4 * phi * phi * phi);
     write_imagef(PhiNext,coord,phi_next);
 }
+
