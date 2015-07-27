@@ -46,7 +46,7 @@ __kernel void calc_3d(__read_only image3d_t Phi,
     
     float4 laplacian = ((xm+xp+ym+yp+zm+zp)/3.0f
                         + (xyp+xym+xpym+xmyp+xzm+xzp+xmzp+xpzm+yzm+yzp+ymzp+ypzm)/6.0f
-                        - 24.0f*phi)/(dx*dx); // 19-point stencil
+                        - 4.0f*phi)/(dx*dx); // 19-point stencil
 #undef __NINETEEN_STENCIL__
 #endif
     float4 phi_next = phi + dt * M * ( 2.0f * K * laplacian - a_2 * phi - a_4 * phi * phi * phi);
