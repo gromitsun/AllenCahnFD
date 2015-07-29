@@ -107,7 +107,7 @@
 				8A3AEA731B602DD900B75949 /* cl_common.hpp */,
 			);
 			path = cl_common;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		8A3AEBA01B6147CD00B75949 /* sim_common */ = {
 			isa = PBXGroup;
@@ -119,9 +119,8 @@
 				8A3AEA571B5DB18900B75949 /* util.cpp */,
 				8A3AEA581B5DB18900B75949 /* util.hpp */,
 			);
-			name = sim_common;
-			path = ../sim_common;
-			sourceTree = "<group>";
+			path = sim_common;
+			sourceTree = SOURCE_ROOT;
 		};
 		8A3AEBA21B6186B700B75949 /* kernels */ = {
 			isa = PBXGroup;
@@ -284,10 +283,6 @@
 		8A3AEA471B59AFE700B75949 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/cl_common",
-				);
 				PRODUCT_NAME = AllenCahnFD;
 			};
 			name = Debug;
@@ -295,10 +290,6 @@
 		8A3AEA481B59AFE700B75949 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/cl_common",
-				);
 				PRODUCT_NAME = AllenCahnFD;
 			};
 			name = Release;
